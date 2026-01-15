@@ -133,23 +133,13 @@
   <p>Copyright (c) 2026 Johan Sopamen</p>
   <p>All rights reserved.</p>
 
-  <!-- Eenvoudige teller -->
-  <div class="visitor-counter">
-    Bezoeken op dit apparaat: <span id="visit-count">0</span>
-  </div>
-</footer>
-
-<script>
-  // Simpele teller met localStorage
-  (function() {
-    const KEY = 'visit_count';
-    let count = parseInt(localStorage.getItem(KEY), 10);
-    if (isNaN(count)) count = 0;
-    count++;
-    localStorage.setItem(KEY, count);
-    document.getElementById('visit-count').textContent = count;
-  })();
-</script>
+ <!-- Externe bezoekers teller -->
+<div class="visitor-counter">
+  <a href="https://www.hitwebcounter.com" target="_blank">
+    <img src="https://hitwebcounter.com/counter/counter.php?page=12345678&style=0006&nbdigits=5&type=page&init=0" 
+         title="Website Visitors" alt="Website Visitors" border="0" />
+  </a>
+</div>
 
 </body>
 </html>
