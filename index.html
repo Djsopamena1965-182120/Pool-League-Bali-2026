@@ -128,5 +128,28 @@
     <p>All rights reserved. This project and its contents may not be copied, modified, distributed, or used without explicit written permission from the author.</p>
   </footer>
 
+<footer class="footer">
+  <p>© 2026 Pool League Bali</p>
+  <p>Copyright (c) 2026 Johan Sopamen</p>
+  <p>All rights reserved.</p>
+
+  <!-- Eenvoudige teller -->
+  <div class="visitor-counter">
+    Bezoeken op dit apparaat: <span id="visit-count">0</span>
+  </div>
+</footer>
+
+<script>
+  // Simpele teller met localStorage
+  (function() {
+    const KEY = 'visit_count';
+    let count = parseInt(localStorage.getItem(KEY), 10);
+    if (isNaN(count)) count = 0;
+    count++;
+    localStorage.setItem(KEY, count);
+    document.getElementById('visit-count').textContent = count;
+  })();
+</script>
+
 </body>
 </html>
